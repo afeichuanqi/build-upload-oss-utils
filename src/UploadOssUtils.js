@@ -3,6 +3,7 @@ const path = require('path');
 const OSS = require('ali-oss');
 const Async = require('async');
 const ProgressBar = require('./ProgressBar')
+const ReadFileList = require("./ReadFileList");
 
 class UploadOssUtil {
     ossConfig = {
@@ -47,7 +48,7 @@ class UploadOssUtil {
         const promises = [];
         let files = [];
         try {
-            files = fs.readdirSync(outputPath);
+            ReadFileList(outputPath, files, outputPath);
         } catch (err) {
           console.log(`${outputPath}文件夹好像不存在哦~ 是否忘记生成了`);
           return ;
