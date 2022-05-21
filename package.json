@@ -1,0 +1,34 @@
+{
+  "name": "build-upload-oss-utils",
+  "version": "1.0.0",
+  "description": "使用webpack构建后能快速上传到阿里云oss",
+  "main": "src/UploadOssUtils.js",
+  "types": "dist/UploadOssUtil.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack"
+  },
+  "keywords": [
+    "webpack",
+    "ali-oss",
+    "build-upload-oss-utils"
+  ],
+  "author": "潘飞龙",
+  "license": "ISC",
+  "dependencies": {
+    "ali-oss": "^6.17.1",
+    "async": "^3.2.3",
+    "path": "^0.12.7",
+    "single-line-log": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-typescript": "^7.17.12",
+    "awesome-typescript-loader": "^5.2.1",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "typescript-declaration-webpack-plugin": "^0.2.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "3.3.12"
+  }
+}

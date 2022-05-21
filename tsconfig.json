@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "declaration": true,
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules","**/*.spec.ts"],
+  "rules": {
+    "ban-ts-comment":"off",
+    "@typescript-eslint/ban-ts-comment": "off"
+  }
+}
