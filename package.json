@@ -1,6 +1,6 @@
 {
   "name": "build-upload-oss-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "使用webpack构建后能快速上传到阿里云oss",
   "main": "src/UploadOssUtils.js",
   "types": "dist/UploadOssUtil.js",

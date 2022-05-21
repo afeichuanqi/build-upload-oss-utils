@@ -35,7 +35,7 @@ class UploadOssUtil {
         if (!this.ossConfig || !this.ossConfig.enable) {
             return ;
         }
-        const outputPath = path.join(__dirname, '../', this.ossConfig.buildPath);
+        const outputPath = path.join(__dirname, '../../../', this.ossConfig.buildPath);
         const client = new OSS(this.ossConfig);
         const headers = [{
             allowedOrigin: '*',
@@ -45,7 +45,13 @@ class UploadOssUtil {
             maxAgeSeconds: '3600'
         }];
         const promises = [];
-        const files = fs.readdirSync(outputPath);
+        let files = [];
+        try {
+            files = fs.readdirSync(outputPath);
+        } catch (err) {
+          console.log(`${outputPath}文件夹好像不存在哦~ 是否忘记生成了`);
+          return ;
+        }
         const pb = new ProgressBar('上传进度', 50);
         let num = 0, total = files.length;
         for (const filePathName of files) {
